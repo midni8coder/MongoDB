@@ -39,3 +39,4 @@ multiple_blog_post = [{
 blog_ids= blog_collection.insert_many(multiple_blog_post)
 print(blog_ids)
 
+
