@@ -1,8 +1,8 @@
 # MongoDB
  MongoDB tutorials and projects
 
-# Need to have MongoDB server installed on your local system
-# Optionally you can install MongoDB Compass an IDE like interface to interact with MongoDB
+ Need to have MongoDB server installed on your local system
+ Optionally you can install MongoDB Compass an IDE like interface to interact with MongoDB
 You can get complete instructions from below link
 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
 
