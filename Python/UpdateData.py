@@ -24,7 +24,7 @@ test_data = [
 		{'productname':'Jam','category':'food','price':125,'color':'red','storeLocation':{'lat':-83372,'long':9827}}
 		]
 
-#product_collection.insert_many(test_data) #-- commenting this to prevent multiple insertion of the same data
+product_collection.insert_many(test_data) #-- commenting this to prevent multiple insertion of the same data
 #to get all the data from collection  - select * from table
 
 all_records = product_collection.find() # returns a cursor which can be looped through 

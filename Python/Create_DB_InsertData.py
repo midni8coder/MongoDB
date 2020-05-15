@@ -21,7 +21,7 @@ blog_post = {
 
 #inserting single record in the collection. Returns object which contains inserted record information
 blog_id = blog_collection.insert_one(blog_post)
-print(blog_id._id)
+
 
 #preparing multiple records to intsert into the collection s
 multiple_blog_post = [{

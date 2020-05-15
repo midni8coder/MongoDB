@@ -1,6 +1,7 @@
 # mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
 # Get data from mongo db - Querying- similar to where queries in Relational Database
 # Refer Create_DB_InsertData.py file for create database and inserting into mongodb collection
+# uncomment product_collection.insert_many(test_data) to insert data and comment it to prevent duplicate records insertion
 
 import pymongo
 
@@ -23,7 +24,7 @@ test_data = [
 		{'productname':'Jam','category':'food','price':125,'color':'red','storeLocation':{'lat':-83372,'long':9827}}
 		]
 
-#product_collection.insert_many(test_data) #-- commenting this to prevent multiple insertion of the same data
+product_collection.insert_many(test_data) #-- commenting this to prevent multiple insertion of the same data
 #to get all the data from collection  - select * from table
 
 all_records = product_collection.find() # returns a cursor which can be looped through 
