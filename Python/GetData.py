@@ -24,15 +24,23 @@ test_data = [
 		{'productname':'Jam','category':'food','price':125,'color':'red','storeLocation':{'lat':-83372,'long':9827}}
 		]
 
-product_collection.insert_many(test_data) #-- commenting this to prevent multiple insertion of the same data
+#product_collection.insert_many(test_data) #-- commenting this to prevent multiple insertion of the same data
 #to get all the data from collection  - select * from table
 
-all_records = product_collection.find() # returns a cursor which can be looped through 
+# -1 descending
+#  1 ascending
+all_records = product_collection.find().sort("productname", -1) # returns a cursor which can be looped through 
+
+#0 means column will be excluded from result set 
+#"_id" will be returned by default, to exclude it need to set 0 
+selected_columns = product_collection.find({},{ "_id": 0, "productname": 1, "category": 1 })
+for record in selected_columns:
+	print(record)
 
 #print(all_records)
 
-#for each_record in all_records: # loop through each record and prints the JSON document 
-#	print(each_record)
+for each_record in all_records: # loop through each record and prints the JSON document 
+	print(each_record)
 
 #to get the first record from the collection 
 
@@ -65,3 +73,5 @@ for record in product_collection.find({'category':'accessories','price':{'$lt':1
 
 for record in product_collection.find({'storeLocation':{'lat':-83372,'long':9827}}):
 	print('storeLocation lat:-83372, long:9827 :  ',record)
+
+
