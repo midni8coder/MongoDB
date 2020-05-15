@@ -12,7 +12,8 @@ Libraries - pymongo
 
 You can install pymongo by either of the commands
 
-pip install pymongo
-python -m pip install pymongo
+1. pip install pymongo
+
+2. python -m pip install pymongo
 
 
